@@ -106,31 +106,6 @@ Pillow (PIL) (Image handling)
 
 Matplotlib / Streamlit Charts (Visualization)
 
-## Installation & Setup
-1. Clone the Repository
-git clone https://github.com/your-username/agribot.git
-cd agribot
-2. Install Dependencies
-pip install streamlit pandas numpy pillow google-generativeai
-3. Add Gemini API Key
-
-Inside app.py, replace:
-
-GEMINI_API_KEY = "PUT_YOUR_GEMINI_API_KEY_HERE"
-
-With your actual API key:
-
-GEMINI_API_KEY = "YOUR_API_KEY"
-
-If no valid key is provided, Agribot runs safely in demo mode.
-
-## 4. Run the App
-streamlit run app.py
-Project Structure
-|-- app.py
-|-- agribot_notes.csv
-|-- README.md
-
 ## Sustainability Focus
 
 Agribot promotes:
@@ -175,5 +150,6 @@ This project is developed for educational purposes.
 
 ## Author
 
-Jeyadita
+A Jeyaditya
+1000406
 Smart Farming Assistant — Formative Assessment Project
