@@ -17,7 +17,7 @@ import numpy as np
 from PIL import Image, ImageDraw
 GEMINI_API_KEY = "AIzaSyB3ogfmBaQ93g0pI7uNIqXOz_haAD0TupM"
 
-USE_REAL_AI = bool(GEMINI_API_KEY and GEMINI_API_KEY != "AIzaSyB3ogfmBaQ93g0pI7uNIqXOz_haAD0TupM")
+USE_REAL_AI = st.(GEMINI_API_KEY)
 st.set_page_config(page_title="Agribot", page_icon="🌾", layout="wide")
 
 st.markdown(
@@ -316,3 +316,4 @@ with tabs[7]:
 
 # ---------------------------- Footer ---------------------------------------
 st.markdown("<div style='text-align:center;padding:10px;margin-top:18px;color:#6b7b8a'>Agribot — Friendly Farm Assistant</div>", unsafe_allow_html=True)
+
