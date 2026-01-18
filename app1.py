@@ -5,14 +5,12 @@ import random
 from PIL import Image
 import matplotlib.pyplot as plt
 
-# ================= PAGE CONFIG =================
 st.set_page_config(
     page_title="Agribot",
     page_icon="🌱",
     layout="wide"
 )
 
-# ================= GEMINI API PLACEHOLDER =================
 GEMINI_API_KEY = "AIzaSyDpBz_hJL79kXOxE_iTJEC24T_BW26yeWs"
 
 def ask_gemini(prompt):
@@ -26,8 +24,6 @@ def ask_gemini(prompt):
         return response.text
     except Exception as e:
         return f"❌ Gemini Error: {e}"
-
-# ================= STYLING =================
 st.markdown("""
 <style>
 body {
@@ -59,10 +55,9 @@ p, label {
 </style>
 """, unsafe_allow_html=True)
 
-# ================= TITLE =================
 st.markdown("<h1 style='text-align:center;'>🌱 AGRIBOT</h1>", unsafe_allow_html=True)
 
-# ================= TOP NAVIGATION =================
+
 tabs = st.tabs([
     "Your Profile",
     "Ask Agribot",
@@ -73,7 +68,7 @@ tabs = st.tabs([
     "Market View"
 ])
 
-# ================= 1. YOUR PROFILE =================
+
 with tabs[0]:
     col1, col2, col3 = st.columns(3)
     name = col1.text_input("Your name")
@@ -85,7 +80,7 @@ with tabs[0]:
     soil_ph = st.slider("Soil pH", 4.0, 10.0, 7.0)
     farm_note = st.text_area("Area to note down your thoughts:")
 
-# ================= 2. ASK AGRIBOT =================
+
 with tabs[1]:
     question = st.text_area("Ask your question related to farming:")
     if st.button("Ask Agribot"):
@@ -93,7 +88,7 @@ with tabs[1]:
             answer = ask_gemini(question)
         st.success(answer)
 
-# ================= 3. PLANT PLANNER =================
+
 with tabs[2]:
     rainfall = st.slider("Expected Rainfall (mm)", 0, 500, 100)
     season = st.selectbox("Season", ["Kharif", "Rabi", "Summer"])
@@ -105,7 +100,7 @@ with tabs[2]:
             )
             response = ask_gemini(prompt)
         st.success(response)
-# ================= 4. LEAF DOCTOR =================
+
 with tabs[3]:
     uploaded = st.file_uploader("Upload the damaged / diseased leaf image", type=["jpg", "png"])
     if uploaded:
@@ -116,7 +111,7 @@ with tabs[3]:
                 ask_gemini("Identify pest or disease in this leaf and suggest organic treatment")
             )
 
-# ================= 5. SOIL CARE =================
+
 with tabs[4]:
     soil_selected = st.selectbox(
         "Select Soil Type",
@@ -128,7 +123,6 @@ with tabs[4]:
             response = ask_gemini(prompt)
         st.success(response)
 
-# ================= 6. WATERING =================
 with tabs[5]:
     water_depth = st.slider("Water Depth Required (cm)", 1, 300, 50)
     rain_chance = st.slider("Chance of Precipitation (%)", 1, 100, 30)
@@ -145,7 +139,7 @@ with tabs[5]:
             response = ask_gemini(prompt)
         st.info(response)
 
-# ================= 7. MARKET VIEW =================
+
 with tabs[6]:
     crop = st.selectbox(
         "Select Crop",
@@ -163,8 +157,9 @@ with tabs[6]:
 
     st.caption("⚠️ Market prices are simulated for demonstration purpose only")
 
-# ================= FOOTER =================
+
 st.markdown(
     "<p style='text-align:center;color:#9ff3c9;'>Agribot • Smart Farming Dashboard 🌱</p>",
     unsafe_allow_html=True
 )
+
