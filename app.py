@@ -4,6 +4,7 @@ import numpy as np
 import random
 from PIL import Image
 import matplotlib.pyplot as plt
+import google.generativeai as genai
 
 # ================= PAGE CONFIG =================
 st.set_page_config(
@@ -165,3 +166,4 @@ st.markdown(
     "<p style='text-align:center;color:#9ff3c9;'>Agribot • Smart Farming Dashboard 🌱</p>",
     unsafe_allow_html=True
 )
+
