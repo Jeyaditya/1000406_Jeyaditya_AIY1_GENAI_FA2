@@ -11,8 +11,6 @@ st.set_page_config(
     layout="wide"
 )
 
-GEMINI_API_KEY = ""
-
 def ask_gemini(prompt):
     if GEMINI_API_KEY.startswith("PASTE"):
         return "⚠️ Gemini API Key not configured. Please add your API key."
@@ -162,5 +160,6 @@ st.markdown(
     "<p style='text-align:center;color:#9ff3c9;'>Agribot • Smart Farming Dashboard 🌱</p>",
     unsafe_allow_html=True
 )
+
 
 
