@@ -3,7 +3,6 @@
 ## Agribot — Friendly Farm Assistant
 
 Link to access Agribot - [https://1000406-jeyaditya-aiy1-genai-fa2-agribot.streamlit.app/ ]
-                         (https://1000406-jeyaditya-aiy1-genai-fa2-agribot.streamlit.app/)
 
 Agribot is a Streamlit-based Smart Farming Assistant designed to help farmers make better day-to-day agricultural decisions. It combines simple data inputs with AI-powered insights (Google Gemini 1.5) to provide guidance on crops, pests, soil care, watering, and basic market trends.
 
